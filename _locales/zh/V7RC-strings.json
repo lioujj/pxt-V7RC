@@ -1,0 +1,18 @@
+{
+    "V7RC|block": "V7RC",
+    "V7RC.commandType.type01|block":"車輛",
+    "V7RC.commandType.type02|block":"坦克",
+    "V7RC.commandType.type03|block":"LED1~4",
+    "V7RC.commandType.type04|block":"LED5~8",
+    "V7RC.channel.channel01|block":"0",
+    "V7RC.channel.channel02|block":"1",
+    "V7RC.channel.channel03|block":"2",
+    "V7RC.channel.channel04|block":"3",
+    "V7RC.v7rcOnConnectedEvent|block": "當V7RC藍芽連線時",
+    "V7RC.v7rcOnDisconnectedEvent|block": "當V7RC藍芽斷線時",
+    "V7RC.v7rcRecvEvent|block": "當收到V7RC藍芽訊息時",
+    "V7RC.v7rcReceivedString|block": "從V7RC接收到的訊息",
+    "V7RC.v7rcCommand|block": "收到的訊息含有控制碼%myType|？",
+    "V7RC.v7rcChannelInt|block": "擷取V7RC訊息 channel:%myChannel|成為數字",
+    "V7RC.v7rcChannelString|block": "擷取V7RC訊息 channel:%myChannel|成為文字"
+}

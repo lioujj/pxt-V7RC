@@ -1,5 +1,5 @@
 {
-    "name": "v7rc",
+    "name": "V7RC",
     "version": "0.0.1",
     "description": "這是專為micro:bit提供的V7RC藍芽控制積木",
     "license": "MIT",
@@ -10,7 +10,7 @@
     "files": [
         "README.md",
         "main.ts",
-        "_locales/zh/v7rc-strings.json"
+        "_locales/zh/V7RC-strings.json"
     ],
     "yotta": {
         "config": {

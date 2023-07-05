@@ -16,5 +16,5 @@
 (The metadata above is needed for package search.)
 
 ```package
-v7rc=github:lioujj/pxt-V7RC
+V7RC=github:lioujj/pxt-V7RC
 ```

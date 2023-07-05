@@ -3,7 +3,7 @@
 */
 
 //% weight=0 color=#439409 icon="\uf294" block="V7RC"
-namespace v7rc {
+namespace V7RC {
     let recvMsg = '';
     let currentType = '';
     bluetooth.setTransmitPower(7);
@@ -32,6 +32,22 @@ namespace v7rc {
     }
 
     //% weight=90
+    //% blockId="v7rcOnConnectedEvent" block="on V7RC connected"
+    export function v7rcOnConnectedEvent(tempAct: Action) {
+        bluetooth.onBluetoothConnected( function () {
+            tempAct();
+        })
+    }
+
+    //% weight=80
+    //% blockId="v7rcOnDisconnectedEvent" block="on V7RC disconnected"
+    export function v7rcOnDisconnectedEvent(tempAct: Action) {
+        bluetooth.onBluetoothDisconnected(function () {
+            tempAct();
+        })
+    }
+
+    //% weight=70
     //% blockId="v7rcRecvEvent" block="when BLE receive message from V7RC"
     export function v7rcRecvEvent(tempAct: Action) {
         bluetooth.onUartDataReceived(serial.delimiters(Delimiters.Hash), function () {
@@ -39,13 +55,13 @@ namespace v7rc {
             tempAct();
         })
     }
-    //% weight=80
+    //% weight=60
     //% blockId="v7rcReceivedString" block="received message from V7RC"
     export function v7rcReceivedString(): string {
         return recvMsg;
     }
 
-    //% weight=70
+    //% weight=50
     //% blockId="v7rcCommand" block="received message includes V7RC control code %myType|？"
     export function v7rcCommand(myType: commandType): boolean {
         let myReturnValue = false;
@@ -82,7 +98,7 @@ namespace v7rc {
         return myReturnValue;
     }
 
-    //% weight=50
+    //% weight=40
     //% blockId="v7rcChannelInt" block="V7RC code extract from channel:%myChannel to integer"
     export function v7rcChannelInt(myChannel: channel): number {
         let myReturnValue = -1;
@@ -93,10 +109,9 @@ namespace v7rc {
         return myReturnValue;
     }
 
-    //% weight=40
+    //% weight=30
     //% blockId="v7rcChannelString" block="V7RC code extract from channel:%myChannel to string"
     export function v7rcChannelString(myChannel: channel): string {
         return recvMsg.substr(myChannel * 4 + 3, 4);
     }
-
 }
