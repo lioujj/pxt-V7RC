@@ -1,6 +1,13 @@
 {
+    "v7rc|block": "V7RC",
     "v7rc.commandType.type01|block":"車輛",
     "v7rc.commandType.type02|block":"坦克",
+    "v7rc.commandType.type03|block":"LED1~4",
+    "v7rc.commandType.type04|block":"LED5~8",
+    "v7rc.channel.channel01|block":"0",
+    "v7rc.channel.channel02|block":"1",
+    "v7rc.channel.channel03|block":"2",
+    "v7rc.channel.channel04|block":"3",
     "v7rc.v7rcRecvEvent|block": "當收到V7RC藍芽訊息時",
     "v7rc.v7rcReceivedString|block": "從V7RC接收到的訊息",
     "v7rc.v7rcCommand|block": "收到的訊息含有控制碼%myType|？",
