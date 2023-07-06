@@ -55,6 +55,7 @@ namespace V7RC {
             tempAct();
         })
     }
+
     //% weight=60
     //% blockId="v7rcReceivedString" block="received message from V7RC"
     export function v7rcReceivedString(): string {
