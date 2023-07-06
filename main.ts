@@ -1,7 +1,6 @@
 /**
 * V7RC藍芽讀取積木
 */
-
 //% weight=0 color="#db2a94" icon="\uf09e" block="V7RC" blockId="V7RC"
 namespace V7RC {
     let recvMsg = '';
