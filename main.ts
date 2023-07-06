@@ -48,7 +48,7 @@ namespace V7RC {
     }
 
     //% weight=70
-    //% blockId="v7rcRecvEvent" block="when BLE receive message from V7RC"
+    //% blockId="v7rcRecvEvent" block="on received message from V7RC"
     export function v7rcRecvEvent(tempAct: Action) {
         bluetooth.onUartDataReceived(serial.delimiters(Delimiters.Hash), function () {
             recvMsg = bluetooth.uartReadUntil(serial.delimiters(Delimiters.Hash));
