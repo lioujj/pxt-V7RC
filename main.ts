@@ -33,17 +33,13 @@ namespace V7RC {
     //% weight=90
     //% blockId="v7rcOnConnectedEvent" block="on V7RC connected"
     export function v7rcOnConnectedEvent(tempAct: Action) {
-        bluetooth.onBluetoothConnected( function () {
-            tempAct();
-        })
+        bluetooth.onBluetoothConnected(tempAct);
     }
 
     //% weight=80
     //% blockId="v7rcOnDisconnectedEvent" block="on V7RC disconnected"
     export function v7rcOnDisconnectedEvent(tempAct: Action) {
-        bluetooth.onBluetoothDisconnected(function () {
-            tempAct();
-        })
+        bluetooth.onBluetoothDisconnected(tempAct);
     }
 
     //% weight=70
@@ -52,6 +48,7 @@ namespace V7RC {
         bluetooth.onUartDataReceived(serial.delimiters(Delimiters.Hash), function () {
             recvMsg = bluetooth.uartReadUntil(serial.delimiters(Delimiters.Hash));
             tempAct();
+            recvMsg='';
         })
     }
 
