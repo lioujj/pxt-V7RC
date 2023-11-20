@@ -9,7 +9,7 @@ namespace V7RC {
     bluetooth.startUartService();
 
     export enum commandType {
-        //% block="vehicle"
+        //% block="car"
         type01 = 1,
         //% block="tank"
         type02 = 2,
